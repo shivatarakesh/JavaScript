@@ -109,14 +109,16 @@ public class ScrollDownTillBottomofPage {
 	}
 	
 	@Test
-	public void sendKeys()  {
+	public void sendKeys() throws InterruptedException  {
 		WebDriver driver =new ChromeDriver();
 		driver.get("https://www.amazon.in/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		WebElement ele= driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
 		JavascriptExecutor js=(JavascriptExecutor) driver;
-		js.executeScript("arguments[0].value=arguments[1]",ele,"iphone");
+	//	js.executeScript("arguments[0].value=arguments[1]",ele,"iphone");
+		js.executeScript("arguments[0].value='iphone'",ele);
+		Thread.sleep(2000);
 		driver.quit();
 	}
 	

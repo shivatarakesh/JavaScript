@@ -5,7 +5,7 @@
     <classes>
       <class name="ScrollDownTillBottomofPage">
         <methods>
-          <include name="ScrollTillElement"/>
+          <include name="sendKeys"/>
         </methods>
       </class> <!-- ScrollDownTillBottomofPage -->
     </classes>
